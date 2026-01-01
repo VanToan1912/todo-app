@@ -38,8 +38,7 @@ export default function RegisterPage() {
     });
 
     if (res.ok) {
-      console.log(res);
-      router.push('/dashboard'); // or '/login?registered=true'
+      console.log("Success! Redirect to dashboard");
     } else {
       const data = await res.json();
       setError(data.message || 'Registration failed');
